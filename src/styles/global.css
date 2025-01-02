@@ -1,0 +1,87 @@
+/* Estilo para os sliders */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px !important;
+  border-radius: 4px;
+  outline: none;
+  background-color: rgb(229, 231, 235);
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(147, 51, 234);
+  cursor: pointer;
+  border: none;
+  margin-top: -4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(147, 51, 234);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.range-slider::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgb(147, 51, 234);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Remover outline do Firefox */
+.range-slider::-moz-focus-outer {
+  border: 0;
+}
+
+/* Estilo do track */
+.range-slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, rgb(147, 51, 234) var(--value, 0%), rgb(229, 231, 235) var(--value, 0%));
+}
+
+.range-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, rgb(147, 51, 234) var(--value, 0%), rgb(229, 231, 235) var(--value, 0%));
+}
+
+.range-slider::-ms-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, rgb(147, 51, 234) var(--value, 0%), rgb(229, 231, 235) var(--value, 0%));
+}
+
+/* Título customizado */
+.title-huge {
+  font-size: 3.5rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Garantir que botões sejam sempre visíveis */
+button {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
