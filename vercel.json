@@ -2,6 +2,11 @@
   "version": 2,
   "routes": [
     {
+      "src": "/analise-de-canibalizacao/$",
+      "status": 308,
+      "headers": { "Location": "/analise-de-canibalizacao" }
+    },
+    {
       "src": "/analise-de-canibalizacao/(.*)",
       "dest": "/$1"
     },
@@ -10,5 +15,6 @@
       "dest": "/"
     }
   ],
-  "cleanUrls": true
+  "cleanUrls": true,
+  "trailingSlash": false
 }
