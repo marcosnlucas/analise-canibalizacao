@@ -1,17 +1,23 @@
 {
   "rewrites": [
-    {
+    { 
       "source": "/analise-de-canibalizacao",
-      "destination": "/"
+      "destination": "/index.html"
     },
     {
-      "source": "/analise-de-canibalizacao/:path*",
-      "destination": "/:path*"
+      "source": "/analise-de-canibalizacao/:match*",
+      "destination": "/index.html"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/analise-de-canibalizacao/(.*)",
+      "dest": "/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/analise-de-canibalizacao/(.*)",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
