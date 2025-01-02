@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/analise-de-canibalizacao",
+      "destination": "/"
+    },
+    {
+      "source": "/analise-de-canibalizacao/:path*",
+      "destination": "/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/analise-de-canibalizacao/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
