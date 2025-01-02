@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildTimestamp": "2025-01-02T19:59:43-03:00",
   "routes": [
     {
       "src": "/analise-de-canibalizacao/$",
