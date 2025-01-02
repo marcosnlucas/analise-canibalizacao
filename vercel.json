@@ -6,7 +6,8 @@
       "status": 308,
       "headers": { 
         "Location": "/analise-de-canibalizacao",
-        "X-Powered-By": "Vercel"
+        "X-Powered-By": "Vercel",
+        "X-Deploy-Test": "true"
       }
     },
     {
