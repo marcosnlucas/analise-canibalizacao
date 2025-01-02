@@ -4,7 +4,10 @@
     {
       "src": "/analise-de-canibalizacao/$",
       "status": 308,
-      "headers": { "Location": "/analise-de-canibalizacao" }
+      "headers": { 
+        "Location": "/analise-de-canibalizacao",
+        "X-Powered-By": "Vercel"
+      }
     },
     {
       "src": "/analise-de-canibalizacao/(.*)",
