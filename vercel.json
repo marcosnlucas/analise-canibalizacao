@@ -1,24 +1,20 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/analise-de-canibalizacao/$",
-      "status": 308,
-      "headers": { 
-        "Location": "/analise-de-canibalizacao",
-        "X-Powered-By": "Vercel",
-        "X-Deploy-Test": "true"
-      }
+      "source": "/analise-de-canibalizacao",
+      "destination": "/"
     },
     {
-      "src": "/analise-de-canibalizacao/(.*)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/analise-de-canibalizacao",
-      "dest": "/"
+      "source": "/analise-de-canibalizacao/:path*",
+      "destination": "/:path*"
     }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "redirects": [
+    {
+      "source": "/analise-de-canibalizacao/$",
+      "destination": "/analise-de-canibalizacao",
+      "permanent": true
+    }
+  ]
 }
