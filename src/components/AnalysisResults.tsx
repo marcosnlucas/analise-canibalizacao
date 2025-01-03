@@ -4,6 +4,7 @@ import { ResultsTable } from './ResultsTable';
 import { CannibalizationChart } from './CannibalizationChart';
 import { IntentDistribution } from './IntentDistribution';
 import { AlertTriangle, TrendingUp } from 'lucide-react';
+import { exportToCSV, exportToPDF } from '../utils/exportUtils';
 
 interface AnalysisResultsProps {
   results: AnalysisResult[];
@@ -57,6 +58,31 @@ export const AnalysisResults: React.FC<AnalysisResultsProps> = ({ results }) => 
           </div>
         </div>
       )}
+
+      {/* Botões de Exportação */}
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold">Resultados da Análise</h2>
+        <div className="flex gap-2">
+          <button
+            onClick={() => exportToCSV(results)}
+            className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-md"
+          >
+            <svg className="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" />
+            </svg>
+            Exportar CSV
+          </button>
+          <button
+            onClick={() => exportToPDF(results)}
+            className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-md"
+          >
+            <svg className="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586L7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" />
+            </svg>
+            Exportar PDF
+          </button>
+        </div>
+      </div>
 
       {/* Gráficos */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
